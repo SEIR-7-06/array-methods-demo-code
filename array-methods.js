@@ -29,6 +29,8 @@ const friends = [
   },
 ]
 
+const petRocks = ['Sally', 'Frank', 'Dan', 'Sally'];
+
 const printName = (person) => {
   console.log(person.firstName);
 }
@@ -48,13 +50,13 @@ const printName = (person) => {
 // ================================================================
 
 // input => the friends array
-// output => ['Wendy', 'Ron', 'Ken', 'Lin']
+// output => ['San Diego', 'New York', 'Chicago']
 
-const friendsFirstNames = friends.map((person) => {
-  return person.firstNames;
+const hometowns = friends.map((friend) => {
+  return friend.hometown;
 })
 
-// console.log(friendsFirstNames);
+console.log(hometowns);
 
 // Activity:
 // Using the map method create an array of welcome messages.
@@ -76,7 +78,7 @@ const friendsLis = friends.map((person) => {
   return `<li>${person.firstName}</li>`;
 });
 
-// console.log(friendsLis);
+console.log(friendsLis);
 
 // input => the friends array
 // output => an array of divs showing the person's name and their hometown
@@ -139,8 +141,32 @@ const friendsOver30WithPets = friends.filter((person) => {
   return person.age > 30 && person.hasPets === true;
 });
 
-console.log(friendsOver30WithPets);
+// console.log(friendsOver30WithPets);
 
 // =====================================================
-// FIND METHOD
+// FIND METHOD - Loop through an array and find an item 
+// that matches a particular criteria
 // =====================================================
+
+// Find the friend with the firstName of 'Ron'
+// Return 
+const ron = friends.find((person) => {
+  return person.firstName === 'Ron';
+});
+
+// console.log(ron);
+
+// Find the friend that has pets
+const friendWithPets = friends.find((person) => {
+  return person.hasPets === true;
+})
+
+// console.log(friendWithPets);
+
+// Activity:
+// Using the find method, find the friend with an age under 30 that does not have pets.
+const friendNoPetUnder30 = friends.find((person) => {
+  return person.hasPets === false && person.age < 30;
+});
+
+// console.log(friendNoPetUnder30);
