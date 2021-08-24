@@ -42,8 +42,10 @@ const printName = (person) => {
 // });
 
 
-// ===========================================================
-// map method - loop through an array and create a brand new array
+// ================================================================
+// MAP METHOD - loop through an array and create a brand new array
+// converting each item in the array
+// ================================================================
 
 // input => the friends array
 // output => ['Wendy', 'Ron', 'Ken', 'Lin']
@@ -98,8 +100,10 @@ const friendsDivs = friends.map((person) => {
 // console.log(friendsDivs);
 
 // ===================================================================
-// filter method - Loop through an array and create a brand new array
+// FILTER METHOD - Loops through an array and creates a brand new array
 // of just the items that match a particular criteria
+// ===================================================================
+
 
 // input => the array of friends
 // output => an array of just friends with pets
@@ -137,5 +141,6 @@ const friendsOver30WithPets = friends.filter((person) => {
 
 console.log(friendsOver30WithPets);
 
-//////////////////////////////////////////////////////////
-// find method
+// =====================================================
+// FIND METHOD
+// =====================================================
